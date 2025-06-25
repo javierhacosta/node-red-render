@@ -1,13 +1,19 @@
-FROM nodered/node-red:3.1.7
+FROM nodered/node-red:3.1.7-minimal
 USER root
 
 # Instala dependencias necesarias
-RUN apt-get update && apt-get install -y build-essential python3 && \
-rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache \
+build-base \
+python3 \
+python3-dev \
+gcc \
+g++ \
+make \
+linux-headers \
+bash
 
 USER node-red
  
-# Instala los nodos adicionales del dashboard y base de datos
 RUN npm install --no-update-notifier --no-fund --no-audit \
 node-red-dashboard \
 node-red-node-mysql \
