@@ -1,7 +1,7 @@
 {
 "name": "node-red-deploy",
 "version": "1.0.0",
-"description": "Node-RED para Render con dashboard y ui_table",
+"description": "Node-RED con dashboard y MySQL",
 "dependencies": {
 "node-red-dashboard": "^3.5.0",
 "node-red-node-mysql": "^0.2.0.",
