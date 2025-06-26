@@ -1,9 +1,10 @@
 {
-"name": "node-red",
-"version": "1.0.0",
-"dependencies": {
-"node-red-dashboard": "^3.5.0",
-"node-red-node-mysql": "^0.2.0.",
-"node-red-contrib-ui-table": "^0.3.10"
-}
+  "name": "node-red",
+  "version": "1.0.0",
+  "description": "Node-RED deployment on Render or Railway",
+  "dependencies": {
+    "node-red-dashboard": "^3.6.0",
+    "node-red-node-mysql": "^0.2.0",
+    "node-red-contrib-ui-table": "^0.3.10"
+  }
 }
