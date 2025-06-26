@@ -1,23 +1,19 @@
-FROM nodered/node-red:3.1.7-minimal
+FROM nodered/node-red:3.1.7
 USER root
 
 # Instala dependencias necesarias
-RUN apk add --no-cache \
-build-base \
+RUN apt-get update && apt-get install -y \
 python3 \
-python3-dev \
-gcc \
+build-essential \
 g++ \
 make \
-linux-headers \
-bash
+gcc \
+&& rm -rf /var/lib/apt/lists/*
 
 USER node-red
 
-RUN mkdir -p /data
-WORKDIR /data
  
-RUN npm install --no-update-notifier --no-fund --no-audit \
+RUN npm install --unsafe-perm \
 node-red-dashboard \
 node-red-node-mysql \
 node-red-contrib-ui-table

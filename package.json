@@ -1,7 +1,6 @@
 {
-"name": "node-red-railway",
+"name": "node-red",
 "version": "1.0.0",
-"description": "Node-RED en Railway con dashboard",
 "dependencies": {
 "node-red-dashboard": "^3.5.0",
 "node-red-node-mysql": "^0.2.0.",
