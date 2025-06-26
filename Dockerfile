@@ -13,6 +13,9 @@ linux-headers \
 bash
 
 USER node-red
+
+RUN mkdir -p /data
+WORKDIR /data
  
 RUN npm install --no-update-notifier --no-fund --no-audit \
 node-red-dashboard \
